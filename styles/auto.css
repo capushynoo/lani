@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(222, 223, 236);
+}
+
+header {
+    text-transform: uppercase;
+
+    padding: 1rem 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 37px;
+    letter-spacing: 0.16em;
+
+    color: #000000;
+
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 16px;
+
+    letter-spacing: 0.04em;
+
+    color: #000000;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icon {
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    left: 80%;
+    top: 46px;
+}
+
+.icon1 {
+
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    left: 82%;
+    top: 46px;
+}
+
+header input {
+    width: 10rem;
+    margin-left: 2rem;
+
+    padding: .4rem .8rem;
+
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #8bb6d7;
+    background-color: #d6e3ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    margin: 10rem auto;
+
+    background-color: #EAF2F8;
+    border-radius: 5px;
+}
+
+.container .book{
+    width: 40%;
+}
+
+.container img{
+    width: 100%;
+}
+
+form {
+    padding: 4rem;
+    width: 60%;
+}
+
+.book img {
+    padding: 15px;
+}
+
+.book {
+    padding: 10px;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+/* style inputs and link buttons */
+.container input,
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; /* remove underline from anchors */
+}
+
+.container input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.google {
+    background-color: #dd4b39;
+    color: white;
+}
+
+/* style the submit button */
+.container input[type=submit] {
+    background-color: #5175a7;
+    color: white;
+    cursor: pointer;
+}
+
+.container input[type=submit]:hover {
+    background-color: #3b607b;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+    display: none;
+}
+
+/* bottom container */
+.bottom-container {
+    background-color: #666;
+    border-radius: 0 0 4px 4px;
+}
