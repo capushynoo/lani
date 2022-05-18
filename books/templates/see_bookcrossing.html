@@ -1,0 +1,42 @@
+{% extends 'user_navbar.html' %}
+
+{% block title %} Books-crossing {% endblock %}
+{% block profileactive %} active {% endblock profileactive %}
+
+{% block css %}
+{% endblock %}
+{% block body %}
+    {% load static %}
+    <div class="row">
+        <div class="col-md">
+            <div class="card card-body">
+                <h5>All Books-crossing requests ({{ requested_books_count }})</h5>
+            </div>
+            <div class="card card-body">
+                <table class="table">
+                    <tr>
+                        <th>Customer</th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                    </tr>
+
+                    {% for i in requested_book %}
+                        <tr>
+                            <td>{{ i.user }}</td>
+                            <td>{{ i.book_name }}</td>
+                            <td>{{ i.author }}</td>
+                            <td>
+                                <form method='get' action='#'>
+                                    <input type="submit" value="Accept book" class="btn btn-info cart" name="Next"/>
+                                </form>
+                                <button id="pr{{ book.id }}" class="btn btn-danger">Decline book</button>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

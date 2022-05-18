@@ -1,0 +1,49 @@
+{% extends 'user_navbar.html' %}
+
+{% block title %} Books crossing {% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+    <div class="container my-4">
+    <div class="jumbotron">
+        <h1 class="display-4">Book-crossing</h1>
+        <p class="lead">The "crossing" or exchanging of books may take any of a number of forms, including
+            wild-releasing books in public, direct swaps with other members of the websites, or "book rings" in which
+            books travel in a set order to participants who want to read a certain book. The community aspect of
+            BookCrossing.com has grown and expanded in ways that were not expected at the outset, in the form of blog or
+            forum discussions, mailing lists and annual conventions throughout the world.<br> <br> Have a nice day!!</p>
+    </div>
+
+    <div class="container">
+        <form action="/bookcrossing/" method="POST"> {% csrf_token %}
+            <input type="text" name="book_name" id="book_name" placeholder="Book Name">
+            &nbsp;&nbsp;&nbsp; <input type="text" name="author" id="author" placeholder="Book Author">
+            &nbsp;&nbsp;&nbsp;
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+            integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+{% endblock %}
+
+
+{% block js %}
+    <script>
+        {% if thank %}
+            alert('We will contact you soon');
+            document.location = "/for_users/"
+        {% endif %}
+    </script>
+{% endblock %}
+
+
+
+
